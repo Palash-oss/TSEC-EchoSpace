@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists - ArtSpace Gallery</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Artists Page Specific Styles */
+        .artists-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f9f8f6 0%, #f0f0f0 100%);
+            padding: 8vw 4vw;
+        }
+        
+        .artists-header {
+            text-align: center;
+            margin-bottom: 6vw;
+        }
+        
+        .artists-header h1 {
+            font-size: 4vw;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 2vw;
+        }
+        
+        .artists-header p {
+            font-size: 1.5vw;
+            color: #666;
+            max-width: 60%;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4vw;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .artist-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 3vw;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .artist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .artist-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 2vw;
+            display: block;
+            border: 4px solid rgba(255, 0, 166, 0.2);
+        }
+        
+        .artist-name {
+            font-size: 2vw;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1vw;
+        }
+        
+        .artist-specialty {
+            font-size: 1.2vw;
+            color: #666;
+            margin-bottom: 1.5vw;
+            font-weight: 300;
+        }
+        
+        .artist-bio {
+            font-size: 1vw;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 2vw;
+        }
+        
+        .artist-works {
+            display: flex;
+            gap: 1vw;
+            justify-content: center;
+            margin-top: 2vw;
+        }
+        
+        .work-sample {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 3vw;
+            left: 3vw;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1vw 2vw;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 0, 166, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 600px) {
+            .artists-page {
+                padding: 6vw 4vw;
+            }
+            
+            .artists-header h1 {
+                font-size: 8vw;
+            }
+            
+            .artists-header p {
+                font-size: 4vw;
+                max-width: 90%;
+            }
+            
+            .artists-grid {
+                grid-template-columns: 1fr;
+                gap: 6vw;
+            }
+            
+            .artist-card {
+                padding: 4vw;
+            }
+            
+            .artist-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .artist-name {
+                font-size: 5vw;
+            }
+            
+            .artist-specialty {
+                font-size: 3vw;
+            }
+            
+            .artist-bio {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Gallery</a>
+    
+    <div class="artists-page">
+        <div class="artists-header">
+            <h1>Featured Artists</h1>
+            <p>Discover the talented artists behind our contemporary art collection. Each artist brings their unique perspective and creative vision to the world of modern art.</p>
+        </div>
+        
+        <div class="artists-grid">
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop" alt="Sarah Chen" class="artist-image">
+                <h3 class="artist-name">Sarah Chen</h3>
+                <p class="artist-specialty">Contemporary Mixed Media Artist</p>
+                <p class="artist-bio">Sarah explores the intersection of traditional techniques and digital innovation, creating works that challenge conventional boundaries.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img1.jpg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img2.jpg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img3.jpg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop" alt="Marcus Rodriguez" class="artist-image">
+                <h3 class="artist-name">Marcus Rodriguez</h3>
+                <p class="artist-specialty">Abstract Oil Painter</p>
+                <p class="artist-bio">Marcus creates bold, expressive abstract works that capture the energy and emotion of urban life through vibrant color and dynamic composition.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img4.jpeg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img5.jpg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img6.jpg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=400&fit=crop" alt="Elena Volkov" class="artist-image">
+                <h3 class="artist-name">Elena Volkov</h3>
+                <p class="artist-specialty">Digital Artist</p>
+                <p class="artist-bio">Elena pushes the boundaries of digital art, creating immersive experiences that blend technology with traditional artistic principles.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img7.jpg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img8.jpg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img9.jpg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=400&fit=crop" alt="David Kim" class="artist-image">
+                <h3 class="artist-name">David Kim</h3>
+                <p class="artist-specialty">Installation Artist</p>
+                <p class="artist-bio">David creates large-scale installations that transform spaces and invite viewers to engage with art in new and unexpected ways.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img10.jpg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img11.jpg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img12.jpeg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=400&fit=crop" alt="Isabella Torres" class="artist-image">
+                <h3 class="artist-name">Isabella Torres</h3>
+                <p class="artist-specialty">Conceptual Photographer</p>
+                <p class="artist-bio">Isabella uses photography as a medium to explore themes of identity, memory, and the human condition through carefully constructed narratives.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img13.jpeg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img14.jpeg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img15.jpeg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=400&fit=crop" alt="James Wilson" class="artist-image">
+                <h3 class="artist-name">James Wilson</h3>
+                <p class="artist-specialty">Street Artist & Muralist</p>
+                <p class="artist-bio">James brings art to the streets, creating large-scale murals that reflect community stories and social commentary through vibrant public art.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img16.jpeg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img17.jpeg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img18.jpeg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+            
+            <div class="artist-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=400&fit=crop" alt="Maya Patel" class="artist-image">
+                <h3 class="artist-name">Maya Patel</h3>
+                <p class="artist-specialty">Watercolor Illustrator</p>
+                <p class="artist-bio">Maya's delicate watercolor works capture the beauty of nature and human emotion through fluid, organic forms and subtle color palettes.</p>
+                <div class="artist-works">
+                    <img src="imgs-painting-scketches/img19.jpeg" alt="Work 1" class="work-sample">
+                    <img src="imgs-painting-scketches/img20.jpeg" alt="Work 2" class="work-sample">
+                    <img src="imgs-painting-scketches/img1.jpg" alt="Work 3" class="work-sample">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // Animate artist cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: entry.target,
+                        opacity: [0, 1],
+                        translateY: [50, 0],
+                        duration: 800,
+                        easing: 'easeOutExpo'
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.artist-card').forEach(card => {
+            card.style.opacity = '0';
+            observer.observe(card);
+        });
+        
+        // Animate header
+        anime({
+            targets: '.artists-header h1',
+            translateY: [30, 0],
+            opacity: [0, 1],
+            duration: 1000,
+            easing: 'easeOutExpo'
+        });
+        
+        anime({
+            targets: '.artists-header p',
+            translateY: [20, 0],
+            opacity: [0, 1],
+            duration: 800,
+            delay: 300,
+            easing: 'easeOutExpo'
+        });
+    </script>
+</body>
+</html>
